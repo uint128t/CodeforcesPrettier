@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Codeforces 美化
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/uint128t/LuoguRedirect
 // @version      7.0
 // @description  基于HSL模型保留色相反转，智能提亮文字，完美支持表格与菜单，替换页眉Logo
-// @author       You
+// @author       uint128t
 // @match        *://*.codeforces.com/*
 // @grant        GM_addStyle
 // @run-at       document-start
