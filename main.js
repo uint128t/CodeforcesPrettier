@@ -7,6 +7,8 @@
 // @match        *://*.codeforces.com/*
 // @grant        GM_addStyle
 // @run-at       document-start
+// @downloadURL https://raw.githubusercontent.com/uint128t/CodeforcesPrettier/refs/heads/main/main.js
+// @updateURL https://raw.githubusercontent.com/uint128t/CodeforcesPrettier/refs/heads/main/main.js
 // ==/UserScript==
 
 (function () {
