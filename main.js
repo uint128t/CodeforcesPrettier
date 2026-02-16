@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Codeforces 美化
 // @namespace    http://tampermonkey.net/
-// @version      6.0
-// @description  基于HSL模型保留色相反转，智能提亮文字，完美支持表格与菜单
+// @version      7.0
+// @description  基于HSL模型保留色相反转，智能提亮文字，完美支持表格与菜单，替换页眉Logo
 // @author       You
 // @match        *://*.codeforces.com/*
 // @grant        GM_addStyle
@@ -17,6 +17,7 @@
     // ==========================================
     const CONFIG = {
         bgImage: "https://res.cloudinary.com/dtqp1ks3x/image/upload/v1771179253/Purple_Opaline_blurred_ynwenc.png",
+        logoImage: "https://res.cloudinary.com/dtqp1ks3x/image/upload/v1771276143/codeforces-transparent_vvaw1j.png",
 
         // 颜色阈值
         bgThreshold: 0.55,      // 背景亮度高于此值视为"浅色"，需反转
@@ -94,6 +95,11 @@
         ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
         ::-webkit-scrollbar-thumb { background: #555; border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: #666; }
+
+        /* 7. 页眉 Logo 替换 */
+        img[src*="codeforces-sponsored-by-ton.png"] {
+            content: url('${CONFIG.logoImage}') !important;
+        }
     `);
 
     // ==========================================
